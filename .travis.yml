@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -f Dockerfile.dev .
+
+scripts:
+  - docker run dcastrodale/our-repo-name npm run test -- --coverage
