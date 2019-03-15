@@ -1,9 +1,7 @@
 sudo: required
 services:
   - docker
-
 before_install:
-  - docker build -t dcastrodale/our-repo-name -f Dockerfile.dev .
-
-scripts:
-  - docker run dcastrodale/our-repo-name npm run test -- --coverage
+  - docker build -t dcastrodale/docker-react-test -f Dockerfile.dev .
+script:
+  - docker run dcastrodale/docker-react-test npm run test -- --coverage
